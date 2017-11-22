@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading"> MEMBER Dashboard</div>
+                <div class="panel-heading">ADMIN Dashboard</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -14,8 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in <strong> MEMBER DEVINKA </strong>!
-                    
+                    You are logged in <strong>ADMIN</strong>!
                 </div>
             </div>
         </div>
@@ -24,12 +23,12 @@
 @endsection
 
 @section('logout') 
-    <a href="{{ route('user.logout') }}" 
+    <a href="{{ route('admin.logout') }}" 
         onclick="event.preventDefault(); 
         document.getElementById('logout-form').submit();"> 
-        Logout 
+    Logout 
     </a> 
-    <form id="logout-form" action="{{ route('user.logout') }}" method="POST" style="display: none;"> 
-        {{ csrf_field() }} 
+    <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;"> 
+    {{ csrf_field() }} 
     </form> 
 @endsection

@@ -84,10 +84,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="page">Landing Page</a>
                     <a href="admin"> Admin </a>
-                    <a href="user">User</a>
-                    <a href="https://github.com/Paskaanugrah">GitHub</a>
+                    <a href="user"> Member </a>
+                    <a href="nonmember"> Non Member </a>
                 </div>
             </div>
         </div>
