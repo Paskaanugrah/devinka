@@ -87,21 +87,21 @@ class ManageAdminController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [ 
-'name' => 'required', 
-'email' => 'required|email|unique:admins,email', 
-'job_title' => 'required', 
-'password' => 'same:confirm-password', 
-]); 
-$input = $request->all(); 
-if(!empty($input['password'])){ 
-$input['password'] = Hash::make($input['password']); 
-}else{ 
-$input = array_except($input,array('password')); 
-} 
-$admin = Admin::find($id); 
-$admin->update($input); 
-return redirect()->route('manageadmins.index') 
-->with('success','Admin successfully updated');
+        'name' => 'required', 
+        'email' => 'required|email|unique:admins,email', 
+        'job_title' => 'required', 
+        'password' => 'same:confirm-password', 
+        ]); 
+        $input = $request->all(); 
+        if(!empty($input['password'])){ 
+        $input['password'] = Hash::make($input['password']); 
+        }else{ 
+        $input = array_except($input,array('password')); 
+        } 
+        $admin = Admin::find($id); 
+        $admin->update($input); 
+        return redirect()->route('manageadmins.index') 
+        ->with('success','Admin berhasil ditambahkan');
     }
 
     /**
@@ -114,7 +114,7 @@ return redirect()->route('manageadmins.index')
     {
         Admin::find($id)->delete(); 
         return redirect()->route('manageadmins.index') 
-        ->with('success','Admin successfully deleted'); 
+        ->with('success','Admin berhasil dihapus'); 
     }
     
     public function __construct() 

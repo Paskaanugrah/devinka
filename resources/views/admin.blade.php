@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">ADMIN Dashboard</div>
+                <div class="panel-heading">Selamat Datang <strong>ADMIN</strong>! </div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -13,8 +13,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in <strong>ADMIN</strong>!
+                    <a href="admin/manageadmins"> <button type="button" class="btn btn-primary-outline">
+                        Manage Admins
+                    </button>
+                    
                 </div>
             </div>
         </div>

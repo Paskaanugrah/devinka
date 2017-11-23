@@ -49,3 +49,8 @@ Route::prefix('admin')->group(function() {
 	Route::resource('manageadmins', 'ManageAdminController');
 });
 
+Route::resource('pemesanan','ManagePemesananController');
+
+Route::get('/pesanmobil', function() {
+	return view('pesanmobil');
+});

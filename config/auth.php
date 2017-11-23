@@ -79,9 +79,15 @@ return [
         ],
 
         'admins' => [
-        'driver' => 'eloquent',
-        'model' => App\Admin::class,
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
         ],
+
+        'pesans' => [
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
+
+        ]
     ],
 
     /*
