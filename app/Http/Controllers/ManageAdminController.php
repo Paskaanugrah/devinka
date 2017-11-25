@@ -42,7 +42,7 @@ class ManageAdminController extends Controller
     {
         $this->validate($request, [ 
         'name' => 'required', 
-        'email' => 'required|email|unique:users,email', 
+        'email' => 'required|email|unique:admins,email', 
         'job_title' => 'required', 
         'password' => 'required|min:6|same:confirm-password', 
         ]); 
@@ -50,7 +50,7 @@ class ManageAdminController extends Controller
         $input['password'] = Hash::make($input['password']); 
         $admin = Admin::create($input); 
         return redirect()->route('manageadmins.index') 
-        ->with('success','Admin successfully added'); 
+        ->with('success','Admin berhasil ditambahkan'); 
     }
 
     /**
@@ -88,7 +88,7 @@ class ManageAdminController extends Controller
     {
         $this->validate($request, [ 
         'name' => 'required', 
-        'email' => 'required|email|unique:admins,email', 
+        'email' => 'required|email', 
         'job_title' => 'required', 
         'password' => 'same:confirm-password', 
         ]); 

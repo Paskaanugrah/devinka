@@ -47,9 +47,12 @@ Route::prefix('admin')->group(function() {
 	Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 	Route::post('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
 	Route::resource('manageadmins', 'ManageAdminController');
+	Route::resource('pemesanan', 'ManagePemesananController');
 });
 
-Route::resource('pemesanan','ManagePemesananController');
+Route::get('/mesan', function() {
+	return view('mesan');
+});
 
 Route::get('/pesanmobil', function() {
 	return view('pesanmobil');

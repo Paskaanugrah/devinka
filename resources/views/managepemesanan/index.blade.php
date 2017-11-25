@@ -16,7 +16,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-		<h1>Manage Pemesanan</h1>
+		<h1>Kelola Pemesanan</h1>
 				@if ($message = Session::get('success'))
 				<div class="alert alert-success">
 					<p>{{ $message }}</p>
@@ -25,7 +25,7 @@
 				<div class="row">
 					<div class="col-lg-12 margin-tb">
 						<div class="pull-right mb-1">
-							<a class="btn btn-success" href="{{ route('managepemesanan.create') }}"> Create Pemesanan</a>
+							<a class="btn btn-success" href="{{ route('pemesanan.create') }}">Buat Pemesanan</a>
 						</div>
 					</div>
 				</div>
@@ -34,7 +34,7 @@
 				<table id="table_pemesanans" class="table table-bordered table-striped">
 					<thead>
 						<tr>
-							<th>Number</th>
+							<th>No</th>
 							<th>Nama</th>
 							<th>NIK</th>
 							<th>Nomor Telepon</th>
@@ -44,7 +44,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						@foreach ($pemesanans as $key => $pesan)
+						@foreach ($pesan as $key => $pesan)
 							<tr>
 								<td>{{ ++$i }}</td>
 								<td>{{ $pesan->name }}</td>
@@ -52,23 +52,28 @@
 								<td>{{ $pesan->no_telp }}</td>
 								<td>{{ $pesan->alamat }}</td>
 								<td>{{ $pesan->mobil }}</td>
-							
 								<td>
 									<a class="btn btn-info"
-									href="{{ route('managepemesanan.show',$pesan->id) }}">Detail</a>
+									href="{{ route('pemesanan.show',$pesan->id) }}">Detail</a>
 									<a class="btn btn-primary"
-									href="{{ route('managepemesanan.edit',$pesan->id) }}">Edit</a>
+									href="{{ route('pemesanan.edit',$pesan->id) }}">Edit</a>
 									{!! Form::open(['method' => 'DELETE','route' =>
-									['managepemesanan.destroy', $pesan->id],'style'=>'display:inline']) !!}
-									{!! Form::submit('Delete', ['class' => 'btn btndanger'])
+									['pemesanan.destroy', $pesan->id],'style'=>'display:inline']) !!}
+									{!! Form::submit('Delete', ['class' => 'btn btn-danger'])
 									!!}
 									{!! Form::close() !!}
 								</td>
+								<!--  -->
 							</tr>
 						@endforeach
 					</tbody>
 				</table>
-			{!! $pesans->render() !!}
+			
+            @if ($pesan->count()==0)
+            <tr>
+                <td colspan="5">No data to display.</td>
+            </tr>
+            @endif
 		</div>
 	</div>
 </div>

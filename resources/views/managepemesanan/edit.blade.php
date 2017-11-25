@@ -13,7 +13,7 @@
 	<div class="container"> 
 	<div class="row"> 
 	<div class="col-md-8 col-md-offset-2"> 
-	<h1>Edit Account</h1> 
+	<h1>Ubah Pemesanan</h1> 
 	@if (count($errors) > 0) 
 	<div class="alert alert-danger"> 
 	<strong>Sorry!</strong> Something wrong with your input data.<br><br>
@@ -24,40 +24,39 @@
 	</ul> 
 	</div> 
 	@endif 
-	{!! Form::model($admin, ['method' => 'PATCH','route' => ['manageadmins.update', $admin->id]]) !!} 
+	{!! Form::model($pesan, ['method' => 'PATCH','route' => ['pemesanan.update', $pesan->id]]) !!} 
 	<div class="row"> 
 	<div class="col-xs-12 col-sm-12 col-md-12"> 
 	<div class="form-group"> 
-	<strong>Name:</strong> 
-	{!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!} 
+	<strong>Nama:</strong> 
+	{!! Form::text('name', null, array('placeholder' => 'Nama','class' => 'form-control')) !!} 
 	</div> 
 	</div> 
 	<div class="col-xs-12 col-sm-12 col-md-12"> 
 	<div class="form-group"> 
-	<strong>Email:</strong> 
-	{!! Form::text('email', null, array('placeholder' => 'Email','class' => 'form-control')) !!} 
+	<strong>NIK	:</strong> 
+	{!! Form::text('nik', null, array('placeholder' => 'Nomor Induk Kependudukan','class' => 'form-control')) !!} 
 	</div> 
 	</div> 
 	<div class="col-xs-12 col-sm-12 col-md-12"> 
 	<div class="form-group"> 
-	<strong>Job title:</strong> 
-	{!! Form::text('job_title', null, array('placeholder' => 'Job title','class' => 'formcontrol')) !!} 
+	<strong>Nomor Telepon	:</strong> 
+	{!! Form::text('no_telp', null, array('placeholder' => 'Nomor Telepon Yang Aktif','class' => 'form-control')) !!} 
 	</div> 
 	</div> 
 	<div class="col-xs-12 col-sm-12 col-md-12"> 
 	<div class="form-group"> 
-	<strong>Password:</strong> 
-	{!! Form::password('password', array('placeholder' => 'Password','class' => 'formcontrol')) !!} 
+	<strong>Alamat :</strong> 
+	{!! Form::text('alamat', null, array('placeholder' => 'Alamat','class' => 'form-control')) !!} 
 	</div> 
 	</div> 
 	<div class="col-xs-12 col-sm-12 col-md-12"> 
 	<div class="form-group"> 
-	<strong>Confirm Password:</strong> 
-	{!! Form::password('confirm-password', array('placeholder' => 'Confirm Password','class' => 'form-control')) !!} 
+	<strong>Mobil	:</strong> 
+	{!! Form::text('mobil', null, array('placeholder' => '-- Mobil yang Disewa --','class' => 'form-control')) !!} 
 	</div> 
 	</div> 
-	<div class="col-xs-12 col-sm-12 col-md-12"> 
-	<div class="form-group"> 
+	<div class="col-xs-12 col-sm-12 col-md-12 text-center"> 
 	<button type="submit" class="btn btn-primary">Submit</button> 
 	</div> 
 	</div> 

@@ -14,7 +14,7 @@
 <div class="container"> 
 <div class="row"> 
 <div class="col-md-8 col-md-offset-2"> 
-<h1>Buat Pemesanan Baru</h1> 
+<center><h1>Form Pemesanan</h1> </center>
 @if (count($errors) > 0) 
 <div class="alert alert-danger"> 
 <strong>Sorry!</strong> Something wrong with your input data.<br><br> 
@@ -60,7 +60,7 @@
 </div> 
 </div> 
 <div class="col-xs-12 col-sm-12 col-md-12 text-center"> 
-<button type="submit" class="btn btn-primary">Submit</button> 
+<button type="submit" class="btn btn-primary">Pesan</button> 
 </div> 
 </div> 
 {!! Form::close() !!} 

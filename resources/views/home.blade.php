@@ -14,10 +14,12 @@
                         </div>
                     @endif
 
-                    You are logged in <strong> MEMBER DEVINKA </strong>!
+                    Selamat Datang! <strong> MEMBER DEVINKA </strong>!
                     
                 </div>
+
             </div>
+            <button type="button" class="btn btn-lg btn-primary-outline"><a href="pesanmobil">Pesan</a> </button>
         </div>
     </div>
 </div>

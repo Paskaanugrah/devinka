@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a href="admin/manageadmins"> <button type="button" class="btn btn-primary-outline">
-                        Manage Admins
+                    <a href="admin/pemesanan"> <button type="button" class="btn btn-primary">
+                        Kelola Pemesanan
                     </button>
                     
                 </div>

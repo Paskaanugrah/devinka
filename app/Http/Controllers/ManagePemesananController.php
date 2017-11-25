@@ -14,11 +14,26 @@ class ManagePemesananController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    public function __construct() 
+    { 
+        $this->middleware('auth:admin'); 
+    }
+
+    public function index(Request $request)
     {
-        $pesans = Pesan::orderBy('id','DESC')->paginate(5); 
-        return view('managepemesanan.index',compact('pesans')) 
-        ->with('i', ($request->input('page', 1) - 1) * 5);     
+        
+        $pesan = Pesan::orderBy('id','DESC')->paginate(10); 
+        return view('managepemesanan.index',compact('pesan')) 
+        ->with('i', ($request->input('page', 1) - 1) * 10); 
+         
+        /*$data =   Teather::where('is_active','=','1')
+                ->orderBy('name','desc')
+                ->take(3)
+                ->get();*/
+        //dd($data);
+        // $pesan = Pesan::all();
+        // return view('managepemesanan.index',compact('pesan'));    
     }
 
     /**
@@ -26,9 +41,9 @@ class ManagePemesananController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        return view('managepemesanan.create');    
     }
 
     /**
@@ -41,15 +56,15 @@ class ManagePemesananController extends Controller
     {
         $this->validate($request, [ 
         'name' => 'required', 
-        'nik' => 'required|unique', 
-        'no_telp' => 'required', 
+        'nik' => 'required|min:9', 
+        'no_telp' => 'required|min:9', 
         'alamat' => 'required',
         'mobil' => 'required', 
         ]); 
         $input = $request->all(); 
         $pesan = Pesan::create($input); 
-        return redirect()->route('managepemesanan.index') 
-        ->with('success','Anda berhasil memesan!'); 
+        return redirect()->route('pemesanan.index') 
+        ->with('success','PEMESANAN BARU BERHASIL DITAMBAHKAN!'); 
     }
 
     /**
@@ -60,7 +75,7 @@ class ManagePemesananController extends Controller
      */
     public function show($id)
     {
-        $pesan = pesan::find($id); 
+        $pesan = Pesan::find($id); 
         return view('managepemesanan.show',compact('pesan')); 
     }
 
@@ -72,7 +87,8 @@ class ManagePemesananController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pesan = Pesan::find($id); 
+        return view('managepemesanan.edit',compact('pesan'));     
     }
 
     /**
@@ -84,7 +100,18 @@ class ManagePemesananController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [ 
+        'name' => 'required', 
+        'nik' => 'required|min:9', 
+        'no_telp' => 'required|min:9', 
+        'alamat' => 'required',
+        'mobil' => 'required', 
+        ]); 
+        $input = $request->all(); 
+        $pesan = Pesan::find($id); 
+        $pesan->update($input); 
+        return redirect()->route('pemesanan.index') 
+        ->with('success','Pemesanan Berhasil Diupdate!');
     }
 
     /**
@@ -95,6 +122,8 @@ class ManagePemesananController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Pesan::find($id)->delete(); 
+        return redirect()->route('pemesanan.index') 
+        ->with('success','DATA PEMESANAN BERHASIL DIHAPUS!'); 
     }
 }

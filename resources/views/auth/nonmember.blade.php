@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content_login')
-	<button type="button" class="btn btn-lg btn-primary-outline"><a href="pesanmobil">Pesan</a> </button>
+	<a href="pesanmobil" type="button" class="btn btn-lg btn-primary">Pesan</a>
 		<br>
-	<button type="button" class="btn btn-lg btn-primary-outline"><a href="user/register">Register</a> </button>
+	<a href="user/register" type="button" class="btn btn-lg btn-primary"> Register </a>
 @endsection
