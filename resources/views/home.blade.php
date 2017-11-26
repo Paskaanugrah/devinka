@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -14,12 +15,14 @@
                         </div>
                     @endif
 
-                    Selamat Datang! <strong> MEMBER DEVINKA </strong>!
+                    <h4><CENTER>Selamat Datang <strong> MEMBER DEVINKA </strong>!</CENTER>
+                    <p>Setelah menjadi Member dapatkan bonus menarik dan diskon setelah melakukan beberapa transaksi pemesanan. Semua hanya ada di <a href="/">DEVINKA TRANSPORT</a>. </p></h4>
+                        <center><h2><i>Your Journey is Our Priority</i></h2>
+                        </center>
                     
                 </div>
 
             </div>
-            <button type="button" class="btn btn-lg btn-primary-outline"><a href="pesanmobil">Pesan</a> </button>
         </div>
     </div>
 </div>

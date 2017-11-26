@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landingpage');
 });
 
 Route::get('/nonmember', function () {
@@ -53,7 +53,11 @@ Route::prefix('admin')->group(function() {
 Route::get('/mesan', function() {
 	return view('mesan');
 });
+Route::post('/pembayaran', 'PembayaranController@store')->name('pembayaran');
 
-Route::get('/pesanmobil', function() {
-	return view('pesanmobil');
+Route::get('/pembayaran', function() {
+	return view('pembayaran');
+});
+Route::get('/welcome', function() {
+	return view('welcome');
 });

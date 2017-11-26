@@ -55,7 +55,9 @@
 <div class="form-group"> 
 <strong>Mobil :</strong> 
 {!! 
-	Form::text('mobil', null, array('placeholder' => '-- Mobil yang Disewa --','class' => 'form-control'))
+	Form::select('mobil', 
+	['Avanza' => 'Avanza', 'Xenia' => 'Xenia', 'Honda Mobilio' => 'Honda Mobilio', 'Honda jazz' => 'Honda Jazz'],
+	 null, ['placeholder' => '-	- Pilih Mobil Anda -	-']);
  !!} 
 </div> 
 </div> 

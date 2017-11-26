@@ -13,7 +13,7 @@
 	<div class="container"> 
 	<div class="row"> 
 	<div class="col-md-8 col-md-offset-2"> 
-	<h1>Ubah Pemesanan</h1> 
+	<center><h1>Ubah Pemesanan</h1> </center>
 	@if (count($errors) > 0) 
 	<div class="alert alert-danger"> 
 	<strong>Sorry!</strong> Something wrong with your input data.<br><br>

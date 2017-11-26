@@ -1,12 +1,12 @@
 @extends('layouts.app') 
 
 @section('logout') 
-	<a href="{{ route('admin.logout') }}" 
+	<a href="{{ route('user.logout') }}" 
 	onclick="event.preventDefault(); 
 	document.getElementById('logout-form').submit();"> 
 	Logout 
 	</a> 
-	<form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;"> 
+	<form id="logout-form" action="{{ route('user.logout') }}" method="POST" style="display: none;"> 
 	{{ csrf_field() }} 
 	</form> 
 @endsection 
@@ -25,7 +25,7 @@
 </ul> 
 </div> 
 @endif 
-{!! Form::open(array('route' => 'pemesanan.store','method'=>'POST')) !!} 
+{!! Form::open(array('route' => 'pembayaran','method'=>'POST')) !!} 
 <div class="row"> 
 <div class="col-xs-12 col-sm-12 col-md-12"> 
 <div class="form-group"> 
@@ -55,7 +55,7 @@
 <div class="form-group"> 
 <strong>Mobil :</strong> 
 {!! 
-	Form::text('mobil', null, array('placeholder' => '-- Mobil yang Disewa --','class' => 'form-control'))
+	Form::select('mobil', ['Toyota Avanza' => 'Toyota Avanza', 'Honda Jazz' => 'Honda Jazz', 'Toyota Xenia' => 'Toyota Xenia', 'Honda Brio' => 'Honda Brio', 'Kijang Innova' => 'Kijang Innova'], null, ['placeholder' => '-	- Pilih Mobil Anda -	-']);
  !!} 
 </div> 
 </div> 

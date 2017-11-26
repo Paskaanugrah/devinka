@@ -13,9 +13,12 @@
 @endsection
 
 @section('content')
+<div class="preloader">
+        <div class="cssload-speeding-wheel"></div>
+    </div>
 <div class="container">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-12 ">
 		<h1>Kelola Pemesanan</h1>
 				@if ($message = Session::get('success'))
 				<div class="alert alert-success">

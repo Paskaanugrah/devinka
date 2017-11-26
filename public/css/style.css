@@ -1,0 +1,33 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:  MyCarRent - Car Rental Responsive HTML Template with RTL
+Version:  1.0
+Last change:  15/01/2017
+Assigned to:  AAN Themes
+Primary use:  Car Rental
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Color codes]
+
+Background    		: #ffffff, #eff3f5
+Content     		: #000000
+Header h1 to h6 	: #546675
+Footer      		: #243c4f
+
+a (standard)  	: #546675
+a (hover)   	: #ffffff
+a (active)    	: #ffffff
+a (focus)   	: #ffffff
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Typography]
+
+Body copy   : 14px/42px Roboto, Lato;
+Headers     : 14px/42px Roboto, Lato;
+Input, textarea : 14px Roboto, Lato;
+Sidebar heading : 18px Roboto, Lato;
+-------------------------------------------------------------------*/
+@import url("main.css");
+@import url("blue.css");

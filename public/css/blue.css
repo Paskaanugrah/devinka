@@ -1,0 +1,112 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:  MyCarRent - Car Rental Responsive HTML Template with RTL
+Version:  1.0
+Last change:  15/01/2017
+Assigned to:  AAN Themes
+Primary use:  Car Rental
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Color codes]
+
+Background    		: #ffffff, #eff3f5
+Content     		: #000000
+Header h1 to h6 	: #546675
+Footer      		: #243c4f
+
+a (standard)  	: #546675
+a (hover)   	: #ffffff
+a (active)    	: #ffffff
+a (focus)   	: #ffffff
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Typography]
+
+Body copy   : 14px/42px Roboto, Lato;
+Headers     : 14px/42px Roboto, Lato;
+Input, textarea : 14px Roboto, Lato;
+Sidebar heading : 18px Roboto, Lato;
+-------------------------------------------------------------------*/
+p.sub-title::after,
+.icon-type1 i,
+.background-blue,
+a.link-light-blue,
+.icon-type1:hover,
+.menu .navbar.navbar-default ul.sub-menu,
+.carousel-indicators li.active,
+.main-slider .carousel-control.left,
+.main-slider .carousel-control.right,
+.documents-btn:hover,
+.view-on-map-btn:hover,
+.schedule-visit-btn.white-border:hover, 
+.documents-btn.white-border:hover,
+.view-on-map-btn.white-border:hover,
+.room-dimentions-panel.panel-group .panel-heading a,
+.dimention-caption,
+.contact-agent-url,
+input[type="button"],
+input[type="submit"],
+.load_more .pagination > li > a:hover, 
+.pagination > li > span:hover,
+.load_more .pagination > li > a:active, 
+.pagination > li > span:active,
+.load_more .pagination > li > a:focus, 
+.pagination > li > span:focus,
+.pagination > .active > a, 
+.pagination > .active > a:focus, 
+.pagination > .active > a:hover, 
+.pagination > .active > span, 
+.pagination > .active > span:focus, 
+.pagination > .active > span:hover,
+.get-direction button {
+	background-color: #FF502B;
+}
+
+@media screen and (min-width: 992px) {
+	header.header-3 .menu .navbar.navbar-default ul.nav > li > a:hover {
+		color: #FF502B;
+	}
+}
+
+.schedule-visit-btn,
+.carousel-indicators li,
+.documents-btn:hover,
+.view-on-map-btn:hover,
+.icon-box-2 i,
+.agent-detail .media-left i,
+ul.agent-social-icons li i:hover,
+.contact-agent-url,
+input[type="button"],
+input[type="submit"],
+.agent-section-container .agent-section-inner .agent-detail .media-left i {
+	border-color: #FF502B;
+}
+
+.schedule-visit-btn,
+.price-label.pull-left,
+.icon-box-2 i,
+.room-dimentions-panel.panel-group .panel-heading a::after,
+.dimention-detail h3,
+.nearby-content h4 span,
+.auther-date a i,
+.agent-detail .media-left i,
+.agent-detail .media-body h4,
+ul.agent-social-icons li i:hover,
+.load_more .pagination > li > a, 
+.pagination > li > span,
+.page-not-found a,
+.agent-section-container .agent-section-inner .agent-detail .media-body h4,
+.agent-section-container .agent-section-inner .agent-detail .media-left i,
+.our-service-section.parallax h2.main-title,
+.our-service-section.parallax h4.icon-title,
+.agent-section-container.parallax h2.main-title,
+.newsletter-container button:hover,
+.amenities-label {
+	color: #FF502B;
+}
+
+.amenities-label {
+	border-color: #FF502B #FF502B -moz-use-text-color;
+}
